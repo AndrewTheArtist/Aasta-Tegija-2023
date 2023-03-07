@@ -1,15 +1,40 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --voco-primary-color:#000;
+  --voco-secondary-color:#fff;
+
+  --voco-toit:#F99D27;
+  --voco-ari:#EF4044;
+  --voco-tehnika:#0089CF;
+  --voco-ilu:#CADB36;
+  --voco-it:#0DB14B;
+  --voco-koolitused:#00B89D;
+
+  --voco-gutter-x:1.75rem;
+  --voco-gutter-y:2.25rem;
+
+
+  --voco-header-height: 10rem; 
+
+
+  --voco-h2-font:2.25rem;
+  --voco-btn-text-size:1.5rem;
 }
 
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--voco-primary-color);
+  color: var(--voco-secondary-color);
+}
+h1, h3, h4, h4, h5, h6{color: var(--voco-secondary-color) !important;}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1{
@@ -17,3 +42,50 @@ h1{
   font-weight: 800;
   color: #000;
 }
+
+.welcome-txt h2{
+  text-transform: uppercase;
+
+  font-size: var(--voco-h2-font);
+}
+
+header{height: var(--voco-header-height); position: relative;}
+  .header-logo svg{position: absolute; top: var(--voco-gutter-x); left: var(--voco-gutter-y);}
+  .header-logo img{position: absolute; top: 1.55rem; left: 8rem;}
+
+footer{
+  position:fixed;bottom: 0;background-color: var(--voco-primary-color);color: var(--voco-secondary-color);font-size: 1rem;width: 100%;height: auto; display: flex; column-gap: 2.5rem; padding: var(--voco-gutter-y) var(--voco-gutter-x) ;
+}
+  .contact-methods{
+    display:flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-evenly;
+    row-gap: 0.55rem
+    ;
+  }
+    .contact-methods p,
+    .contact-methods span{
+      margin: 0 !important;
+    }
+  .fb-logo svg{fill:var(--voco-secondary-color); height: 64px;}
+  .footer-logo-img{
+    position: absolute;
+    bottom: 0;
+    right: 3.5rem;
+  }
+
+.welcome-txt{width: 60%; margin: auto;}
+  .welcome-txt p{font-size: 1.5rem;width: 89%;margin: var(--voco-gutter-y) auto;}
+.register_btn{margin-left:auto; margin-right: auto; box-sizing: border-box;}
+  .register_btn_link{
+    cursor: pointer;
+    background-color: var(--voco-secondary-color);
+    color: var(--voco-primary-color);
+    font-size: var(--voco-btn-text-size);
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 25px;
+    padding: 1.4375rem 1.59375rem;
+  }
+  .register_btn_link:hover{background-color: rgb(32, 196, 244);}
