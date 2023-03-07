@@ -1,7 +1,7 @@
 # Aasta Tegija 2023
 ## Esimene Koht
 
-** Liikmed: **
+**Liikmed:**
 * Anette Aguraiuja - projektijuht
 * Andreas Alexander Sütt - arendaja
 * Sandra Pärtel - disainer/arendaja
