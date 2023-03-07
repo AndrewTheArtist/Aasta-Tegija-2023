@@ -26,6 +26,12 @@ function App() {
       useEffect(()=>{
         getData()
       },[])
+    
+      const[isActive, setIsActive] = useState(false);
+      const handleClick = event =>{
+        setIsActive(current => !current);
+      };
+
   return (
     <div className="App">
       <Header/>
@@ -36,15 +42,34 @@ function App() {
               <p>{index.sectiontxt}</p>
           </div>
           )}
-          <div class="register_btn">
-            <button type="submit" class="register_btn_link">Registreeri testile</button>
+          
+         <div class="register_btn">
+            <button class="register_btn_link"  onClick={handleClick}>Registreeri testile</button>
           </div>
         </section>
+
+        <div class="form-popup" id="myForm" className={isActive ? 'dply-none' : ''}>
+            <form action="/action_page.php" class="form-container">
+                <h3>sisesta oma andmed</h3>
+
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" />
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw"/>
+
+                <button type="submit" class="btn">Login</button>
+                <button  class="btn cancel">Close</button>
+            </form>
+        </div>
+
+
       <Footer/>
     </div>
 
 
   );
+
 }
 
 export default App;
